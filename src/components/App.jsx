@@ -4,15 +4,20 @@ import Footer from "./Footer";
 import Note from "./Note";
 import notes from "../notes";
 
+
+
 function App(){
-    return <div>
+return  <div>
         <Header />
-        <Note 
-            Title = {notes[0].title}
-            Content = {notes[0].content}
-        />
+        {notes.map(noteItem =>  (
+            <Note key={noteItem.key} 
+            Title={noteItem.title} 
+            Content={noteItem.content} />
+        )
+        )}
         <Footer />
     </div>
+    
 }
 
 export default App;
