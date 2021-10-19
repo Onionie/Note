@@ -7,17 +7,23 @@ import notes from "../notes";
 
 
 function App(){
-return  <div>
+
+    function addNote(newNote) {
+        setNotes(prevNotes => {
+          return [...prevNotes, newNote];
+        });
+      }
+
+
+    return (
+        <div>
         <Header />
-        {notes.map(noteItem =>  (
-            <Note key={noteItem.key} 
-            Title={noteItem.title} 
-            Content={noteItem.content} />
-        )
-        )}
+        <CreateArea onAdd={addNote} />
+        <Note key={1} title="Note title" content="Note content" />
         <Footer />
-    </div>
-    
+        </div>
+    );
+        
 }
 
 export default App;
