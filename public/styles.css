@@ -101,3 +101,13 @@ form.create-note button {
   cursor: pointer;
   outline: none;
 }
+.link{
+  text-decoration: none;
+  color: #f5ba13;
+  font-size: 1rem;
+}
+
+.link:hover{
+    text-decoration: none;
+    color: #0CECDD;
+}

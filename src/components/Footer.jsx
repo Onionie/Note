@@ -1,12 +1,9 @@
 import React from "react";
 
 function Footer(){
-const date = new Date();
-const year = date.getFullYear();
-
  return (
    <footer>
-    <p> Copyright {year} </p>
+    <a class="link" href="https://github.com/Onionie/Note"> Oniel Gutierrez </a>
    </footer> 
  );
 }
